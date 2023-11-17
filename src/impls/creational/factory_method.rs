@@ -7,9 +7,9 @@
     Using structs and traits, we separate the concrete implementation from the interfaces, from the product (Tool) and it's own creator (factory).
 */
 pub mod person;
+pub mod tools;
 pub mod traits;
 pub mod user;
-pub mod tools;
 
 use crate::impls::creational::factory_method::person::Person;
 use crate::impls::creational::factory_method::tools::{CreateToolA, CreateToolB};
@@ -18,7 +18,7 @@ use crate::impls::creational::factory_method::user::User;
 #[derive(Debug)]
 pub enum Tools {
     ToolA,
-    ToolB
+    ToolB,
 }
 
 pub fn tools_factory_method() -> () {
@@ -30,7 +30,6 @@ pub fn tools_factory_method() -> () {
     // The font color for this implementation should be 'red'
     // "name: wesley; age: 23"
 
-
     let tool_b = CreateToolB::new("green");
     let person = Person::new("enrique", 19, tool_b);
 
@@ -38,7 +37,4 @@ pub fn tools_factory_method() -> () {
     // Output
     // The font color for this implementation should be 'green'
     // "name: enrique; age: 19"
-
-
-
 }

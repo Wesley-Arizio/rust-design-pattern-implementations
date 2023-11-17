@@ -1,13 +1,13 @@
 #[derive(Debug)]
 pub enum ConsoleStatus {
     ON,
-    OFF
+    OFF,
 }
 
 #[derive(Debug)]
 pub enum ControllerStatus {
     CONNECTED,
-    DISCONNECTED
+    DISCONNECTED,
 }
 
 pub trait Controller<C> {

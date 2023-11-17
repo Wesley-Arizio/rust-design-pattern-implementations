@@ -7,7 +7,7 @@ pub struct ToolA {
 impl ToolA {
     fn new(color: &str) -> Self {
         Self {
-            color: color.into()
+            color: color.into(),
         }
     }
 }
@@ -16,7 +16,10 @@ impl ToolA {
 impl Tool for ToolA {
     fn print<T: ToString>(&self, content: &T) -> () {
         // TODO - use any third party library to style the logs
-        println!("The font color for this implementation should be '{}'", self.color);
+        println!(
+            "The font color for this implementation should be '{}'",
+            self.color
+        );
         println!("{:#?}", content.to_string());
     }
 }
@@ -28,7 +31,7 @@ pub struct CreateToolA {
 impl CreateToolA {
     pub fn new(color: &str) -> Box<Self> {
         Box::new(Self {
-            color: color.into()
+            color: color.into(),
         })
     }
 }
@@ -46,7 +49,7 @@ pub struct ToolB {
 impl ToolB {
     fn new(color: &str) -> Self {
         Self {
-            color: color.into()
+            color: color.into(),
         }
     }
 }
@@ -55,7 +58,10 @@ impl ToolB {
 impl Tool for ToolB {
     fn print<T: ToString>(&self, content: &T) -> () {
         // TODO - use any third party library to style the logs
-        println!("The font color for this implementation should be '{}'", self.color);
+        println!(
+            "The font color for this implementation should be '{}'",
+            self.color
+        );
         println!("{:#?}", content.to_string());
     }
 }
@@ -67,7 +73,7 @@ pub struct CreateToolB {
 impl CreateToolB {
     pub fn new(color: &str) -> Box<Self> {
         Box::new(Self {
-            color: color.into()
+            color: color.into(),
         })
     }
 }
